@@ -1,3 +1,19 @@
+<div align="center">
+
+[![Lifecycle](https://img.shields.io/badge/●_RESEARCH-a855f7?style=for-the-badge&labelColor=0f0f23)](https://github.com/beyond-repair/ADL-Governance)
+[![Claim](https://img.shields.io/badge/Claim_≤1-22c55e?style=for-the-badge&labelColor=0f0f23)](https://github.com/beyond-repair/ADL-Governance/blob/main/docs/CLAIM_VALIDATION.md)
+[![Governance](https://img.shields.io/badge/ADL--Governance-7c3aed?style=for-the-badge&labelColor=0f0f23)](https://github.com/beyond-repair/ADL-Governance)
+
+```
+LIFECYCLE   RESEARCH
+CLAIM       ≤1
+NOT CLAIMED thrust · energy extraction · AGI · production autonomy
+```
+
+</div>
+
+---
+
 # seem-identity-unifier
 
 Claim-capped **identity map** for three SEEM repositories that share vocabulary and must not be collapsed:
@@ -47,3 +63,14 @@ python -m pytest -q
 - `seem-sunder-bridge` (Q-003 interop contract; explicitly left this gap open)
 - `sunder-cleanroom-vsa-adapter` (Q-FUNC-002)
 - `ADL-Governance`, `forge-aegis`, `aegis-repo-graph`
+
+
+---
+
+<div align="center">
+
+**REWRITE · BUILD · TRANSCEND**
+
+Governing source: [ADL-Governance](https://github.com/beyond-repair/ADL-Governance) · [Claim levels 0–5](https://github.com/beyond-repair/ADL-Governance/blob/main/docs/CLAIM_VALIDATION.md)
+
+</div>
