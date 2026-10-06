@@ -34,8 +34,11 @@ It does **not** close `Q-FUNC-004` (OS constitution merge) or `Q-FUNC-005` (work
 | Named surfaces (seem / banel / dream / vsa) appear under different paths | Vector-space or AST isomorphism |
 | No SUPERSEDES / SAME_AS / EQUIVALENT_TO edge is licensed | Merge, delete, or archive of any identity |
 | Deterministic validation tests | Live GitHub crawler |
+| 2026-10-06 directory recheck: named paths still listed | Function-body audit |
 
 Claim cap of this repo: **MODULE_SURFACE**.
+
+Snapshot lock remains `2026-09-05`. The Sweep-256 recheck does not replace it.
 
 ## Why not SUPERSEDES
 
@@ -48,6 +51,7 @@ Default-branch trees differ in layout:
 | SEEM-Cognitive_Microservice | `backend/seem/**` + React `src/` |
 
 Name collision is not identity collapse.
+Portfolio SUPERSEDED (new work goes to `sovereign-clean-room`) is not an identity collapse.
 
 ## Run
 
