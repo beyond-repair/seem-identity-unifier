@@ -1,31 +1,31 @@
 # Governance — seem-identity-unifier
 
-**Sweep:** 118  
+**Sweep:** 256  
 **Classification:** RESEARCH  
-**Head (pre-lock):** `ae6e0c0dedb2ca4c7b034d3f29308ed38ba13aae`  
-**Live CI:** run `33941447514` success (2026-09-05, workflow `ci`, event push, branch main)  
+**Head before this stamp:** `8737edd4d6d02e29a60f70799757d56aff3a3741`  
+**Prior live CI:** run `36847809401` success (2026-10-01, workflow `ci`, event push, branch main, head `8737edd4`)  
 **Releases / tags:** none  
-**Open Dependabot alerts:** none listed this cycle  
-**Claim cap:** MODULE_SURFACE
+**Claim cap:** MODULE_SURFACE  
+**Snapshot lock:** 2026-09-05  
+**Path recheck:** 2026-10-06 directory listings; functions unaudited  
 
-## Demonstrated (tree + CI; not live GitHub crawl)
+## Demonstrated
 
 | Feature | State |
 |---------|-------|
-| Identity map of three named SEEM repos | VERIFIED (code + tests + CI) |
-| Claim that no SUPERSEDES/SAME_AS/EQUIVALENT_TO edge is licensed by *this* module | VERIFIED (docs/CLAIM.md + README contract) |
-| Deterministic pytest suite | VERIFIED (CI success 33941447514) |
+| Identity map of three named SEEM repos | VERIFIED (code + tests; prior CI 36847809401 on pre-recheck head) |
+| Named module paths still listed on 2026-10-06 | VERIFIED (directory listings only) |
+| No SUPERSEDES/SAME_AS/EQUIVALENT_TO edge licensed by this module | VERIFIED (docs/CLAIM.md + tests) |
 | Live GitHub crawler | ABSENT |
 | Runtime / AST / VSA isomorphism | NOT CLAIMED |
-| Merge, delete, or archive of mapped identities | FORBIDDEN by this repo; archive/supersede remains operator-gated in ADL-Governance |
+| Merge, delete, or archive of mapped identities | FORBIDDEN |
 
 ## Portfolio tension (do not silently overwrite)
 
-ADL-Governance currently classifies the three mapped identities as **SUPERSEDED** *for new work* by `sovereign-clean-room`.
+ADL-Governance classifies the three mapped identities as SUPERSEDED for new work by `sovereign-clean-room`.
 This repository forbids treating that lifecycle label as identity collapse.
-Both statements stand:
 
-- Successor for *new* SEEM runtime work: `sovereign-clean-room` (portfolio).
+- Successor for new SEEM runtime work: `sovereign-clean-room` (portfolio).
 - Historical GitHub identities remain distinct artifacts (this module).
 
 ## Not allowed from this lock
@@ -33,3 +33,4 @@ Both statements stand:
 - Promote this repo to ACTIVE product runtime.
 - Claim Q-FUNC-004 or Q-FUNC-005 closed.
 - Delete or rewrite history of mapped repos.
+- Treat the 2026-10-06 recheck as a function-body audit.

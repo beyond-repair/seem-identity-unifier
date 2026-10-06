@@ -2,13 +2,22 @@
 
 Invariant: no SUPERSEDES edge exists among these identities.
 Similarity of names is not identity equivalence.
+
+Sweep-256 recheck (2026-10-06) confirmed the named paths still appear in
+default-branch directory listings. That recheck does not replace SNAPSHOT_DATE
+and does not audit function bodies.
 """
 
 from __future__ import annotations
 
 SNAPSHOT_DATE = "2026-09-05"
+RECHECK_DATE = "2026-10-06"
 QUEUE_ID = "Q-FUNC-003"
 CLAIM_CAP = "MODULE_SURFACE"
+RECHECK_NOTE = (
+    "directory listings only; paths present; functions unaudited; "
+    "SUPERSEDES still forbidden"
+)
 
 ALLOWED_RELATIONS = (
     "DISTINCT_FROM",

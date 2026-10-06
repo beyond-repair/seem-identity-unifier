@@ -2,7 +2,10 @@ from unifier.engine import validate
 from unifier.identities import (
     FORBIDDEN_RELATIONS,
     IDENTITIES,
+    RECHECK_DATE,
+    RECHECK_NOTE,
     SHARED_SURFACES,
+    SNAPSHOT_DATE,
     distinct_pairs,
 )
 
@@ -40,3 +43,13 @@ def test_shared_surfaces_are_names_not_isomorphisms():
     for s in SHARED_SURFACES:
         assert "no" in s["claim"].lower() or "exist" in s["claim"].lower() or "name" in s["claim"].lower()
         assert s["names"]
+
+
+def test_recheck_does_not_replace_snapshot():
+    r = validate()
+    assert SNAPSHOT_DATE == "2026-09-05"
+    assert RECHECK_DATE == "2026-10-06"
+    assert r["snapshot"] == SNAPSHOT_DATE
+    assert r["recheck"] == RECHECK_DATE
+    assert "unaudited" in RECHECK_NOTE
+    assert "SUPERSEDES still forbidden" in RECHECK_NOTE

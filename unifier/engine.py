@@ -7,7 +7,10 @@ from .identities import (
     FORBIDDEN_RELATIONS,
     IDENTITIES,
     QUEUE_ID,
+    RECHECK_DATE,
+    RECHECK_NOTE,
     SHARED_SURFACES,
+    SNAPSHOT_DATE,
     distinct_pairs,
 )
 
@@ -19,6 +22,14 @@ class ContractError(ValueError):
 def validate() -> dict:
     if QUEUE_ID != "Q-FUNC-003":
         raise ContractError("queue id drift")
+    if SNAPSHOT_DATE != "2026-09-05":
+        raise ContractError("snapshot date must remain the lock date")
+    if RECHECK_DATE != "2026-10-06":
+        raise ContractError("recheck date drift")
+    if "isomorphism" in RECHECK_NOTE.lower():
+        raise ContractError("recheck note overclaims")
+    if "SUPERSEDES still forbidden" not in RECHECK_NOTE:
+        raise ContractError("recheck must keep SUPERSEDES forbidden")
     if len(IDENTITIES) != 3:
         raise ContractError("exactly three SEEM identities are in scope")
     names = list(IDENTITIES)
@@ -45,6 +56,8 @@ def validate() -> dict:
         "pairs": pairs,
         "surfaces": [s["surface"] for s in SHARED_SURFACES],
         "supersedes": False,
+        "snapshot": SNAPSHOT_DATE,
+        "recheck": RECHECK_DATE,
     }
 
 
