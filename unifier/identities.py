@@ -3,6 +3,10 @@
 Invariant: no SUPERSEDES edge exists among these identities.
 Similarity of names is not identity equivalence.
 
+The 2026-10-02 re-read checks that the locked paths still exist at the pinned
+default-branch commits. It does not import those trees and does not audit
+function bodies for isomorphism.
+
 Sweep-256 recheck (2026-10-06) confirmed the named paths still appear in
 default-branch directory listings. That recheck does not replace SNAPSHOT_DATE
 and does not audit function bodies.
@@ -11,9 +15,11 @@ and does not audit function bodies.
 from __future__ import annotations
 
 SNAPSHOT_DATE = "2026-09-05"
+REREAD_DATE = "2026-10-02"
 RECHECK_DATE = "2026-10-06"
 QUEUE_ID = "Q-FUNC-003"
 CLAIM_CAP = "MODULE_SURFACE"
+VERSION = "0.1.1"
 RECHECK_NOTE = (
     "directory listings only; paths present; functions unaudited; "
     "SUPERSEDES still forbidden"
@@ -101,9 +107,44 @@ SHARED_SURFACES: tuple[dict, ...] = (
     {
         "surface": "vsa_resonator",
         "names": ("resonator_vsa.py", "core/resonator.py", "backend/seem/core/vsa.py"),
-        "claim": "VSA/resonator surfaces exist under different paths",
+        "claim": "VSA/resonator surfaces exist under different paths; not an isomorphism",
     },
 )
+
+# Frozen file read on 2026-10-02. Not a crawler. Not an algebra proof.
+# Default constructor integers match. Parameter names and numeric libraries do not.
+REREAD: dict = {
+    "date": REREAD_DATE,
+    "pins": {
+        "SEEM-2.0-Self-Evolving-Emergent-Mind": "2354210da84ab6a6389ae6108c3b889e028fd5da",
+        "SEEM-Cognitive-Microservice": "268f7ccfd1822864dea9036858c7fd50169918f3",
+        "SEEM-Cognitive_Microservice": "bf12df6b81d757a0e8438374efde555e966f80e9",
+    },
+    "vsa_file": {
+        "SEEM-2.0-Self-Evolving-Emergent-Mind": "resonator_vsa.py",
+        "SEEM-Cognitive-Microservice": "core/resonator.py",
+        "SEEM-Cognitive_Microservice": "backend/seem/core/vsa.py",
+    },
+    "default_dim_literal": {
+        "SEEM-2.0-Self-Evolving-Emergent-Mind": 16384,
+        "SEEM-Cognitive-Microservice": 16384,
+        "SEEM-Cognitive_Microservice": 16384,
+    },
+    "dim_parameter": {
+        "SEEM-2.0-Self-Evolving-Emergent-Mind": "dim",
+        "SEEM-Cognitive-Microservice": "dim",
+        "SEEM-Cognitive_Microservice": "dimension",
+    },
+    "substrate": {
+        "SEEM-2.0-Self-Evolving-Emergent-Mind": "numpy",
+        "SEEM-Cognitive-Microservice": "torch",
+        "SEEM-Cognitive_Microservice": "numpy",
+    },
+    "algebra": "NAME_ONLY",
+    "runtime_import": "NOT_CLAIMED",
+    "isomorphism": "NOT_CLAIMED",
+    "mind": "NOT_CLAIMED",
+}
 
 
 def distinct_pairs() -> tuple[tuple[str, str], ...]:

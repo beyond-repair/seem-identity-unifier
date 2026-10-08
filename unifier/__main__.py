@@ -1,4 +1,5 @@
-from .engine import main
+"""python -m unifier"""
 
-if __name__ == "__main__":
-    main()
+from unifier.engine import main
+
+raise SystemExit(main())
