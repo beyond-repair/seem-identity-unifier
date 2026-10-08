@@ -34,3 +34,11 @@ This repository forbids treating that lifecycle label as identity collapse.
 - Claim Q-FUNC-004 or Q-FUNC-005 closed.
 - Delete or rewrite history of mapped repos.
 - Treat the 2026-10-06 recheck as a function-body audit.
+
+## 2026-10-02 repair note (v0.1.1)
+
+v0.1.1 makes the same identity map installable (`pip install -e ".[dev]"`, `python -m unifier`).
+The 2026-09-05 path lock is unchanged, and so is the 2026-10-06 Sweep-256 directory recheck.
+A file re-read at three pinned commits records constructor literal 16384 on each VSA file, and also records that parameter names (`dim` vs `dimension`) and substrates (numpy vs torch) are not the same.
+That re-read is not a live crawler, not an isomorphism, and not a promotion to ACTIVE.
+CI run `36847809401` covered the pre-repair tree only.

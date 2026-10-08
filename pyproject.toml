@@ -1,9 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "seem-identity-unifier"
-version = "0.1.0"
-description = "Claim-capped identity map for SEEM forks. No SUPERSEDES."
+version = "0.1.1"
+description = "Claim-capped identity map for three SEEM repositories. No SUPERSEDES. Not a mind."
 requires-python = ">=3.10"
-dependencies = ["pytest"]
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[tool.setuptools.packages.find]
+include = ["unifier*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
